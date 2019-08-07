@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, main {
+  height: 100%;
+}
+
+body {
+  font: 2vh/1.5 cursive;
+}
+
+ul li {
+  list-style: none;
+}
+
+.clearfix::after {
+  content:'';
+  display: block;
+  clear: both;
+}
