@@ -1,0 +1,237 @@
+html, body, section {
+  height: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+  .layout {
+    width: 900px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .layout {
+    width: 800px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .layout {
+    width: 600px !important;
+  }
+}
+
+.layout {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+main {
+  padding-top: 12vh;
+  height: calc(100% - 24vh);
+}
+
+main .aside {
+  float: left;
+}
+
+main .aside figure {
+  width: 46vh;
+  height: 46vh;
+  background: url(../img/bgd.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+main .aside .action {
+  display: flex;
+  margin-top: 5vh;
+}
+
+.aside .action span {
+  flex: 1;
+  color: rgba(255,255,255,0.4);
+  font-size: 6vh;
+  text-align: center;
+  cursor: pointer;
+  transition: color .4s;
+}
+
+.action span:hover {
+  color: #fff;
+}
+
+main .detail {
+  margin-left: 55vh;
+  color: #fff;
+}
+
+main .detail .album-name {
+  padding: 3px 5px;
+  background: #FF5799;
+  font-size: 2.5vh;
+  text-align: center;
+  border-radius: 2px;
+}
+
+main .detail .title {
+  display: block;
+  margin-top: 3vh;
+  font-size: 6vh;
+}
+
+main .detail .info {
+  display: flex;
+  margin-top: 8vh;
+}
+
+.info span {
+  flex: 1;
+  font-size: 4vh;
+}
+
+.info span>span {
+  margin-left: 2vh;
+  font-size: 3.5vh;
+}
+
+.detail .bar-ct {
+  display: flex;
+  margin-top: 5vh;
+  align-items: center;
+}
+
+.detail .bar-ct .bar {
+  position: relative;
+  margin-right: 10px;
+  width: 90%;
+  height: 1vh;
+  background: rgba(255,255,255,0.4);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.bar-ct .bar .progress {
+  position: absolute;
+  width: 10%;
+  height: 1vh;
+  background: #FF5799;
+  border-radius: 2px;
+  transition: width .8s;
+}
+
+.detail .bar-ct .time {
+  float: right;
+  font-size: 3vh;
+}
+
+.detail .singer {
+  margin-top: 3vh;
+  color: #ccc;
+  font-size: 3vh;
+}
+
+.detail .lyric {
+  margin-top: 6vh;
+  font-size: 3.5vh;
+}
+
+.bgd {
+  z-index: -1;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  background: url(../img/bgd.jpg);
+  background-position: center center;
+  background-size: cover;
+  filter: blur(4px);
+}
+
+.bgd::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+footer {
+  height: 24vh;
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0px -0.25vh 0.25vh 0.25vh rgba(255,255,255,0.2);
+}
+
+footer .box {
+  position: relative;
+  overflow: hidden;
+  height: 24vh;
+}
+
+footer .album-list {
+  position: absolute;
+}
+
+footer .album-list li {
+  float: left;
+  margin: 1vh 4vh 0 1vh;
+  width: 20vh;
+  height: 22vh;
+  text-align: center;
+  cursor: pointer;
+}
+
+.album-list li.active {
+  box-shadow: 0 2px 5px 0 rgba(255,255,255, 0.9);
+}
+
+.album-list li:hover {
+  box-shadow: 0 2px 5px 0 rgba(255,255,255, 0.9);
+}
+
+.album-list li .img {
+  width: 20vh;
+  height: 18vh;
+  background-position: center center;
+  background-size: cover;
+}
+
+.album-list li span {
+  display: block;
+  padding: 2px;
+  font-size: 2.5vh;
+}
+
+footer .iconfont {
+  position: absolute;
+  top: 3vh;
+  color: rgba(255,255,255,0.4);
+  font-size: 12vh;
+  transition: all .4s;
+  cursor: pointer;
+  opacity: 0;
+}
+
+footer .iconfont:hover {
+  color: #fff;
+}
+
+footer:hover .iconfont {
+  opacity: 1;
+}
+
+footer .layout {
+  position: relative;
+}
+
+footer .icon-arLeft {
+  left: -13vh;
+}
+
+footer .icon-arRight {
+  right: -13vh;
+}
